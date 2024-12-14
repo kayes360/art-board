@@ -30,6 +30,7 @@ body {
 
 button {
   padding: 10px 15px;
+  margin: 0 10px;
   cursor: pointer;
   font-size: 16px;
   background: white;
@@ -48,10 +49,26 @@ button:focus {
   outline: none;
 }
 
+.selected{
+    background-color: #000;
+    color: #fff;
+}
+
 /* Canvas */
 canvas {
   border: 1px solid #ccc;
   display: block;
   margin: auto;
-  background-color: #fff;
+  background-color: #fff; 
 }
+
+.eraser-indicator {
+    position: absolute;
+    width: 20px; /* Match eraser size */
+    height: 20px; /* Match eraser size */
+    background-color: #fff;
+    border: 1px solid #000; /* Semi-transparent */
+    border-radius: 50%;
+    pointer-events: none; /* Allow mouse events to pass through */
+    transform: translate(-50%, -50%); /* Center indicator on cursor */
+  }
